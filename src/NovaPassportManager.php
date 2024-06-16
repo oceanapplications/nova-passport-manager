@@ -17,7 +17,7 @@ class NovaPassportManager extends Tool
     public function boot()
     {
         Nova::script('nova-passport-manager', __DIR__.'/../dist/js/tool.js');
-        Nova::style('nova-passport-manager', __DIR__.'/../dist/css/tool.css');
+       // Nova::style('nova-passport-manager', __DIR__.'/../dist/css/tool.css');
     }
 
     /**
