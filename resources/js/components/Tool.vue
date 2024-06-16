@@ -180,12 +180,20 @@ export default {
 }
 </script>
 
+<style  lang="scss" scoped>
+@import "~bootstrap/scss/bootstrap.scss";
+
+.card bg-white dark:bg-gray-800 {
+    border-radius: 0.5rem;
+}
+
+</style>
 
 <template>
     <div>
         <h1>Passport Manager</h1>
         <h2 class="mt-8 text-90 font-normal text-2xl">Authorized Applications</h2>
-        <div class="card mt-3">
+        <div class="card bg-white dark:bg-gray-800 mt-3">
             <p v-show="authorizedTokens.length === 0" class="p-6 text-center text-gray-500">
                 No OAuth Clients have connected yet.
             </p>
@@ -236,7 +244,7 @@ export default {
 
 
         <h2 class="mt-8 text-90 font-normal text-2xl">OAuth Clients</h2>
-        <div class="card mt-3">
+        <div class="card bg-white dark:bg-gray-800 mt-3">
             <div class="flex border-b border-40">
                 <div class="w-1/5 py-6 px-8">
                     <label for="create-client-name" class="inline-block text-80 pt-2 leading-tight">
@@ -285,7 +293,7 @@ export default {
             </div>
         </div>
 
-        <div class="card mt-3 overflow-hidden">
+        <div class="card bg-white dark:bg-gray-800 mt-3 overflow-hidden">
             <p v-show="clients.length === 0" class="p-6 text-center text-gray-500">
                 You have not yet created any OAuth clients.
             </p>
@@ -334,7 +342,7 @@ export default {
         </div>
 
         <h2 class="mt-8 text-90 font-normal text-2xl">Access Tokens</h2>
-        <div v-show="accessToken.length == 0" class="card mt-3">
+        <div v-show="accessToken.length == 0" class="card bg-white dark:bg-gray-800 mt-3">
             <div class="flex border-b border-40">
                 <div class="w-1/5 py-6 px-8">
                     <label for="access-token-name" class="inline-block text-80 pt-2 leading-tight">
@@ -372,7 +380,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div v-show="accessToken.length > 0" class="card mt-3">
+        <div v-show="accessToken.length > 0" class="card bg-white dark:bg-gray-800 mt-3">
             <div class="flex border-b border-40 remove-bottom-border">
                 <div class="w-1/5 py-6 px-8">
                     <label for="accessToken" class="inline-block text-80 pt-2 leading-tight">
@@ -400,7 +408,7 @@ export default {
             </div>
         </div>
 
-        <div class="card mt-3">
+        <div class="card bg-white dark:bg-gray-800 mt-3">
             <p v-show="accessTokens.length === 0" class="p-6 text-center text-gray-500">
                 You have not yet created any Access Tokens.
             </p>
